@@ -17,6 +17,18 @@ public class RandomStuff {
 
     	System.out.println(y);
 
+		//range -3 to 8 -> 12 possible numbers
+		int z = (int)(Math.random()*12 - 3);
+		System.out.println(z);
+
+		Random rrr = new Random();
+		int q = rrr.nextInt(15) + 13;
+		System.out.println(q);
+
+		//range 1 to 13
+		int d = (int)(Math.random()*13 + 1);
+		System.out.println(verbs.dat);
+
     }
 
 
