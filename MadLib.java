@@ -47,21 +47,24 @@ public class MadLib
 			while(chopper.hasNext())
 			{
 				String nexty = chopper.next();
-				String story = "";
 
-				if(new String(nexty.equals("#")))
+				if(new String(nexty).equals("#"))
 				{
 					story += " " + getRandomNoun();
 				}
 
-				else if(new String(nexty.equals("@")))
+				else if(new String(nexty).equals("@"))
 				{
 					story += " " + getRandomVerb();
 				}
 
-				else if(new String(nexty.equals("&")))
+				else if(new String(nexty).equals("&"))
 				{
 					story += " " + getRandomAdjective();
+				}
+				else
+				{
+					story += " " + nexty;
 				}
 			}
 
@@ -128,19 +131,19 @@ public class MadLib
 
 	public String getRandomVerb()
 	{
-		String v = verbs.get((int)(Math.random()*13));
+		String v = verbs.get((int)(Math.random()*verbs.size()));
 		return "" + v;
 	}
 
 	public String getRandomNoun()
 	{
-		String n = nouns.get((int)(Math.random()*19));
+		String n = nouns.get((int)(Math.random()*nouns.size()));
 		return "" + n;
 	}
 
 	public String getRandomAdjective()
 	{
-		String a = adjectives.get((int)(Math.random()*17));
+		String a = adjectives.get((int)(Math.random()*adjectives.size()));
 		return "" + a;
 	}
 
